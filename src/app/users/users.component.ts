@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {UserService} from './user.service';
 
 @Component({
     selector : 'app-users',
@@ -6,32 +7,13 @@ import { Component } from '@angular/core';
     styleUrls: ['./users.component.css']
 })
 
-export class UsersComponent {
+export class UsersComponent implements OnInit {
     title = 'Users';
-    users = [
-        {
-            name: 'Andrea',
-            lastname: 'Polidoro',
-            email: 'andrea.polidoro@me.com',
-            fiscalcode: 'PLDNDR92C31H501F',
-            province: 'Roma',
-            phone: '+393396059710'
-        },
-        {
-            name: 'Riccardo',
-            lastname: 'Toni',
-            email: 'riccardo.toni@me.com',
-            fiscalcode: '#',
-            province: 'Roma',
-            phone: '#'
-            },
-        {
-            name: 'Luca',
-            lastname: 'Martini',
-            email: 'luca.martini@me.com',
-            fiscalcode: '#',
-            province: 'Roma',
-            phone: '#'
-        },
-    ];
+    users = [];
+    constructor (private service: UserService) {
+    }
+
+    ngOnInit() {
+        this.users = this.service.getUsers();
+    }
 }
