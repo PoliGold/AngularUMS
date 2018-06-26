@@ -8,12 +8,15 @@ import {UserService} from './user.service';
 })
 
 export class UsersComponent implements OnInit {
-    title = 'Users';
     users = [];
     constructor (private service: UserService) {
     }
 
     ngOnInit() {
         this.users = this.service.getUsers();
+    }
+
+    onDeleteUser(user) {
+        this.service.deleteUser(user);
     }
 }

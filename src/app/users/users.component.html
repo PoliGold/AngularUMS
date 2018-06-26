@@ -1,23 +1,15 @@
-<table>
-
-    <caption>{{title}}</caption>
-
-    <tr>
-        <th>Nome</th>
-        <th>Cognome</th>
-        <th>Codice Fiscale</th>
-        <th>Telefono</th>
-        <th>Provincia</th>
-        <th>Telefono</th>
-    </tr>
-    
-    <tr *ngFor="let user of users">
-        <td>{{user.name}}</td>
-        <td>{{user.lastname}}</td>
-        <td>{{user.email}}</td>
-        <td>{{user.fiscalcode}}</td>
-        <td>{{user.province}}</td>
-        <td>{{user.phone}}</td>
-    </tr>
-
-</table>
+<div id="tbl-users">
+    <table>
+        <thead>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Codice Fiscale</th>
+            <th>Telefono</th>
+            <th>Provincia</th>
+            <th>Telefono</th>
+            <th class="actions">Actions</th>
+        </thead>
+        <tr app-user *ngFor="let user of users" [user-data] = "user" (onDeleteUser) = "onDeleteUser($event)">
+        </tr>
+    </table>
+</div>

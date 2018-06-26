@@ -1,0 +1,14 @@
+button {
+    padding: 5px;
+    width: 80px;
+}
+
+button.delete {
+    color: black;
+}
+
+td {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 2px solid #ddd;;
+}
