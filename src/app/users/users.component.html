@@ -4,12 +4,12 @@
             <th>Nome</th>
             <th>Cognome</th>
             <th>Codice Fiscale</th>
-            <th>Telefono</th>
+            <th>Email</th>
             <th>Provincia</th>
             <th>Telefono</th>
             <th class="actions">Actions</th>
         </thead>
-        <tr app-user *ngFor="let user of users" [user-data] = "user" (onDeleteUser) = "onDeleteUser($event)">
+        <tr app-user *ngFor="let user of users" [user-data] = "user" (onDeleteUser) = "onDeleteUser($event)" (onSelectUser) = "onSelectUser($event)">
         </tr>
     </table>
 </div>

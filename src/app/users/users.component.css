@@ -10,11 +10,10 @@ th {
     padding: 8px;
     text-align: center;
     border-bottom: 2px solid #ddd;
-    width: 220px;
 }
 
 .actions {
-    width: 100px;
+    width: 170px;
 }
 
 tr:hover {
