@@ -4,7 +4,13 @@
 <td>{{user.email}}</td>
 <td>{{user.province}}</td>
 <td>{{user.phone}}</td>
-<td>
-    <button class="update" (click)="updateUser()">UPDATE</button>
-    <button class="delete" (click)="deleteUser()">DELETE</button>
+<td class="buttons">
+    <div class="row">
+        <div class="col-sm-6">
+            <button class="btn btn-primary" (click)="updateUser()"><fa name="pencil"></fa></button>
+        </div>
+        <div class="col-sm-6">
+            <button class="btn btn-danger" (click)="deleteUser()"><fa name="trash-o"></fa></button>
+        </div>
+    </div>
 </td>

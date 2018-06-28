@@ -1,14 +1,13 @@
-button {
-    padding: 5px;
-    width: 70px;
+.buttons {
+    width: 80px;
 }
 
-button.delete {
-    color: black;
+.buttons div {
+    padding: 0px;
 }
 
 td {
-    padding: 8px;
+    padding: 5px;
     text-align: center;
     border-bottom: 2px solid #ddd;;
 }

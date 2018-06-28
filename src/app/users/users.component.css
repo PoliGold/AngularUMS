@@ -6,16 +6,11 @@ table {
 }
 
 th {
-    background: #FFD2BD;
     padding: 8px;
     text-align: center;
     border-bottom: 2px solid #ddd;
 }
 
 .actions {
-    width: 170px;
-}
-
-tr:hover {
-    background-color: #ffdf8d;
+    width: 110px;
 }
